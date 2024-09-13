@@ -2,6 +2,7 @@ package vendaingressos;
 import java.util.Date;
 import java.util.List;
 import java.util.ArrayList;
+import java.util.Calendar;
 
 
 public class Evento {
@@ -47,10 +48,10 @@ public class Evento {
     }
 
     public boolean isAtivo(){
-        if(this.Data.before(new Date())){
-            return false;
-        }else{
-            return true;
-        }
-    }
+    Calendar calendario = Calendar.getInstance();
+    calendario.set(2024, Calendar.AUGUST, 10);
+    Date dataSet = calendario.getTime();
+    
+    return (this.Data.after(dataSet));
+}
 }
