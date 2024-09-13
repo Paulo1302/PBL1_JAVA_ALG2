@@ -48,10 +48,9 @@ public class Evento {
     }
 
     public boolean isAtivo(){
-    Calendar calendario = Calendar.getInstance();
-    calendario.set(2024, Calendar.AUGUST, 10);
-    Date dataSet = calendario.getTime();
-    
-    return (this.Data.after(dataSet));
-}
+        Calendar calendario = Calendar.getInstance();
+        calendario.set(2024, Calendar.AUGUST, 10);
+        Date dataSet = calendario.getTime();
+        
+        return (this.Data.after(dataSet));}
 }
